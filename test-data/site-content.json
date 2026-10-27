@@ -1,0 +1,31 @@
+{
+  "certificationProcessSteps": [
+    "Pendaftaran",
+    "Pra Asesmen",
+    "Penjadwalan",
+    "Uji Kompetensi",
+    "Keputusan Asesmen",
+    "Keputusan Pleno"
+  ],
+  "counterLabels": [
+    "Pemegang Sertifikat",
+    "Skema Sertifikasi",
+    "Tempat Uji Kompetensi",
+    "Asesor Kompetensi"
+  ],
+  "tableHeaders": {
+    "asesor": ["No", "Nama Lengkap", "No Registrasi"],
+    "jadwal": [
+      "No",
+      "Nama Jadwal",
+      "Tanggal Pelaksanaan",
+      "Tanggal Selesai",
+      "Kuota Peserta",
+      "Status Jadwal"
+    ],
+    "tuk": ["No", "Nama TUK", "Jenis", "Alamat"]
+  },
+  "knownTypos": ["kompten", "menguupload", "terhadapa", "melalu metode"],
+  "faqQuestionCount": 11,
+  "firstFaqAnswerSnippet": "Sertifikasi kompetensi kerja merupakan serangkaian proses pemberian sertifikat kompetensi"
+}

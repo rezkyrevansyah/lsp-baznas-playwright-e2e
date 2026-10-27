@@ -1,0 +1,74 @@
+[
+  {
+    "parent": "Profil",
+    "child": "Sejarah LSP",
+    "path": "/profile/3/sejarah-lsp",
+    "heading": "sejarah"
+  },
+  {
+    "parent": "Profil",
+    "child": "Legalitas",
+    "path": "/profile/5/legalitas-lsp",
+    "heading": "legalitas"
+  },
+  {
+    "parent": "Profil",
+    "child": "Visi & Misi",
+    "path": "/profile/2/visi-misi-lsp",
+    "heading": "visi dan misi"
+  },
+  {
+    "parent": "Profil",
+    "child": "Struktur Organisasi",
+    "path": "/profile/6/struktur-organisasi",
+    "heading": "struktur organisasi"
+  },
+  {
+    "parent": "Sertifikasi",
+    "child": "Alur Sertifikasi",
+    "path": "/profile/alur-sertifikasi",
+    "heading": "alur sertifikasi"
+  },
+  {
+    "parent": "Sertifikasi",
+    "child": "Skema Sertifikasi",
+    "path": "/skema_sertifikasi",
+    "heading": "skema sertifikasi"
+  },
+  {
+    "parent": "Sertifikasi",
+    "child": "Asesor Kompetensi",
+    "path": "/asesor_kompetensi",
+    "heading": "asesor kompetensi"
+  },
+  {
+    "parent": "Uji Kompetensi",
+    "child": "Jadwal Uji Kompetensi",
+    "path": "/jadwal",
+    "heading": "jadwal uji kompetensi"
+  },
+  {
+    "parent": "Uji Kompetensi",
+    "child": "Tempat Uji Kompetensi",
+    "path": "/tempat_uji_kompetensi",
+    "heading": "tempat uji kompetensi"
+  },
+  {
+    "parent": "Uji Kompetensi",
+    "child": "Pendaftaran Uji",
+    "path": "/register",
+    "heading": "registrasi akun"
+  },
+  {
+    "parent": "Informasi",
+    "child": "FAQ",
+    "path": "/faq",
+    "heading": "frequently asked questions"
+  },
+  {
+    "parent": "Informasi",
+    "child": "Dokumentasi",
+    "path": "/dokumentasi",
+    "heading": "dokumentasi"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "name": "lsp-baznas-playwright-e2e",
+  "version": "1.0.0",
+  "description": "End-to-end test automation suite for the public website of LSP BAZNAS, built with Playwright + TypeScript (portfolio project).",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --project=chromium",
+    "test:mobile": "playwright test --project=mobile-chrome",
+    "test:a11y": "playwright test --grep @a11y",
+    "test:known-issues": "playwright test --grep @known-issue",
+    "test:headed": "playwright test --project=chromium --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [
+    "playwright",
+    "e2e",
+    "qa-automation",
+    "typescript",
+    "page-object-model"
+  ],
+  "author": "Revan",
+  "license": "MIT",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.20.5",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.3"
+  }
+}
