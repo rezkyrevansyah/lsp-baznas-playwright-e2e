@@ -98,6 +98,9 @@ test.describe('Known issues', { tag: ['@regression', '@known-issue'] }, () => {
     await beritaPage.open();
     await beritaPage.articleTitles.first().click();
     await expect(page).toHaveURL(/\/berita\/\d+\//);
+    // The URL changes before the HTML is fully parsed; on a slow link (e.g. CI) the
+    // sidebar <img> tags would otherwise be missing from the count.
+    await page.waitForLoadState('domcontentloaded');
 
     const srcs = await page
       .locator('img')
@@ -110,7 +113,10 @@ test.describe('Known issues', { tag: ['@regression', '@known-issue'] }, () => {
     }
 
     const totalMb = totalBytes / 1024 / 1024;
-    test.info().annotations.push({ type: 'image-weight', description: `${totalMb.toFixed(1)} MB` });
+    test.info().annotations.push({
+      type: 'image-weight',
+      description: `${totalMb.toFixed(1)} MB across ${new Set(srcs).size} images`,
+    });
     expect(totalMb).toBeLessThan(ARTICLE_IMAGE_BUDGET_MB);
   });
 });

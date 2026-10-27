@@ -25,6 +25,8 @@ export abstract class BasePage {
    * heavy section elsewhere on the page does not slow the check down.
    */
   async brokenImages(scope: Locator = this.page.locator('body')): Promise<string[]> {
+    // Make sure every <img> is in the DOM, otherwise an empty scope would pass vacuously.
+    await this.page.waitForLoadState('domcontentloaded');
     await this.page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     const images = scope.locator('img');
     await expect
