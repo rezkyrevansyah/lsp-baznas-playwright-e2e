@@ -5,8 +5,8 @@ import { test, expect } from '../../fixtures';
  * Accessibility AUDIT (WCAG 2.1 A/AA) with axe-core.
  *
  * This is a reporting test: violations are attached to the HTML report as JSON and
- * summarised in annotations. It only fails on an unexpected page error, so a third-party
- * site we don't control can't break the pipeline – the findings go to docs/FINDINGS.md.
+ * summarised in annotations. It only fails on an unexpected page error, so existing
+ * violations don't block the pipeline – the findings go to docs/FINDINGS.md.
  */
 const pages = ['/', '/skema_sertifikasi', '/jadwal', '/faq', '/register', '/kontak'];
 

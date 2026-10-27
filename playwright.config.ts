@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 /**
- * The target is a live production website owned by a public institution.
+ * The target is the live production website.
  * Keep the load low: few workers, no load testing, read-only scenarios only.
  */
 const BASE_URL = process.env.BASE_URL ?? 'https://lsp.baznas.go.id';

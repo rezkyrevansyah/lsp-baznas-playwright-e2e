@@ -1,7 +1,7 @@
 {
   "name": "lsp-baznas-playwright-e2e",
   "version": "1.0.0",
-  "description": "End-to-end test automation suite for the public website of LSP BAZNAS, built with Playwright + TypeScript (portfolio project).",
+  "description": "End-to-end test automation suite for the public website of LSP BAZNAS, built with Playwright + TypeScript.",
   "private": true,
   "scripts": {
     "test": "playwright test",

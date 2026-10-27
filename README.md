@@ -11,8 +11,7 @@ End-to-end test automation for the public website of **LSP BAZNAS**
 📊 **Live test report:** https://rezkyrevansyah.github.io/lsp-baznas-playwright-e2e/
 🐞 **Bug findings:** [docs/FINDINGS.md](docs/FINDINGS.md)
 
-> **Disclaimer.** This is a personal QA portfolio project. It is not an official LSP BAZNAS product.
-> The tests run against **production**, so they are deliberately **read-only**: no form is ever submitted,
+> **Production safety.** The tests run against **production**, so they are deliberately **read-only**: no form is ever submitted,
 > no credentials are entered, no account is created, and traffic is kept low (1–2 workers, smoke-only
 > cross-browser runs, weekly schedule). No load or security testing is performed.
 
@@ -154,7 +153,7 @@ test('BUG-05 <html lang> matches the Indonesian content', async ({ page }) => {
 | Forms are checked with `checkValidity()`, never submitted | Production must stay clean: no fake accounts, no contact-form spam.                                                                                                                           |
 | Image weight is measured with `HEAD` requests             | Measuring BUG-09 by downloading 68 MB on every CI run would add to the problem. Blocking the images and reading `content-length` keeps the check cheap.                                       |
 | Waits target the element that matters                     | For example, `brokenImages()` waits only for images inside the given scope, and the FAQ helper waits for Bootstrap's collapse animation to finish. There are no fixed `waitForTimeout` calls. |
-| Cross-browser runs are limited to `@smoke`                | Full coverage on Chromium, broad but shallow coverage on Firefox and WebKit, and less traffic to a public institution's server.                                                               |
+| Cross-browser runs are limited to `@smoke`                | Full coverage on Chromium, broad but shallow coverage on Firefox and WebKit, and less traffic to the production server.                                                                       |
 
 ## 🚀 Getting Started
 
@@ -223,7 +222,7 @@ The known-issue tests record their evidence in the report. BUG-09, for example, 
 
 ![BUG-09 in the Playwright report: 68.0 MB measured against a 5 MB budget](docs/images/known-issue-bug-09.png)
 
-## 🧭 Testing Ethics
+## 🛡️ Production Safety Rules
 
 - Public pages only: no login and no authenticated areas.
 - Forms are checked with `HTMLFormElement.checkValidity()` and are **never submitted**.
